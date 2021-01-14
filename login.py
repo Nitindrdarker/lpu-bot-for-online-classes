@@ -18,12 +18,16 @@ class Myclass:
         global c
         c = self.driver.find_elements_by_class_name('fc-content')
         c[i].click()
+        time.sleep(10)
+        self.driver.find_element_by_xpath('/html/body/div[1]/div[2]/div/div/a')#enter the xpath of the join button here
         time.sleep(15)
-        self.driver.find_element_by_xpath('')#enter the xpath of the join button here
+        self.driver.find_element_by_xpath('/html/body/div[2]/div/div/div[1]/div/div/span/button[2]/span[1]/i')#listining
+
+
 
     def leave(self):
         self.driver.back()
-        self.driver.find_element_by_xpath('')#enter the xpath of the leave meeting option appered after prssing back button on your browser
+        self.driver.find_element_by_xpath('/html/body/div[7]/div[2]/div/div[4]/div[2]/button[1]')#enter the xpath of the leave meeting option appered after prssing back button on your browser
         global c
         time.sleep(10)
         c = self.driver.find_elements_by_class_name('fc-content')
